@@ -3,5 +3,4 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/
-    source: /test.war
-    source: /index.html
+   
