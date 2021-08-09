@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: /Index.html
     destination: /var/www/html/
     source: /test.war
     destination: /var/www
