@@ -4,6 +4,21 @@ os: linux
 files:
   - source: index.html
     destination: /var/www/html/
+    
+     destination: /usr/share/tomcat/webapps
+permissions:
+  - object: /
+    pattern: "**"
+    owner: root
+    group: root
+ApplicationStop:
+    - location: /usr/share/tomcat/bin shutdown.sh
+      timeout: 20
+      
+  ApplicationStart:
+    - location: /usr/share/tomcat/bin startup.sh
+      timeout: 20
+      
 
 
    
