@@ -6,13 +6,12 @@ files:
     
  #    destination: /usr/share/tomcat/webapps
 
-#ApplicationStop:
-  #  - location: /usr/share/tomcat/bin shutdown.sh
- #     timeout: 20
-      
-#  ApplicationStart:
- #   - location: /usr/share/tomcat/bin startup.sh
-  #    timeout: 20
+destination: /usr/share/tomcat/webapps
+permissions:
+  - object: /
+    pattern: "**"
+    owner: root
+    group: root
     ApplicationStart:
     - location: scripts/start_server.sh
     ApplicationStop:
