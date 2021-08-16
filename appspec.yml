@@ -3,11 +3,9 @@ os: linux
 files:
   - source: index.html
     destination: /var/www/html/
-
-
 permissions:
   - object: /
-    pattern: "**"
+    pattern: "*"
     owner: root
     group: root
     ApplicationStart:
@@ -15,6 +13,3 @@ permissions:
     ApplicationStop:
     - location: /usr/share/tomcat/bin shutdown.sh
       timeout: 20
-   
-
-   
